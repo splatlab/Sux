@@ -343,6 +343,10 @@ uint64_t rank9sel::bit_count() {
 	return ( num_counts + inventory_size + num_words / 4 ) * 64;
 }
 
+uint64_t get_word(const uint64_t index) {
+	return bits[index/64ULL];
+}
+
 void rank9sel::print_counts() {
 #ifdef COUNTS
 	printf( "single:\t%lld\none level:\t%lld\ntwo levels:\t%lld\nshorts:\t%lld\nlongs:\t%lld\nlonglongs:\t%lld\n", single, one_level, two_levels, shorts, longs, longlongs );

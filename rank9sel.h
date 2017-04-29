@@ -36,6 +36,7 @@ public:
 	~rank9sel();
 	uint64_t rank( const uint64_t pos );
 	uint64_t select( const uint64_t rank );
+	uint64_t get_word(const uint64_t index);
 	// Just for analysis purposes
 	void print_counts();
 	uint64_t bit_count();
